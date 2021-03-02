@@ -1,0 +1,26 @@
+{% extends '../base.html' %}
+
+
+{% block title %}
+Registra un nuevo usuario
+{% endblock title %}
+
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="row my-5">
+    <div class="col">
+        <h1>Registra aquí a tus nuevos usuarios</h1>
+    </div>
+</div>
+<div class="row my-5">
+    <div class="col-4">
+        <form method="post" autocomplete="off">{% csrf_token %}
+            {{form|crispy}}
+            <button class="btn btn-primary mt-3" type="submit">Registrar</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

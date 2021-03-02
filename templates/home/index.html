@@ -1,0 +1,30 @@
+{% extends '../base.html' %}
+
+
+{% block title %}
+Página de inicio
+{% endblock title %}
+
+
+
+{% block content %}
+<div class="row my-5">
+    <div class="col">
+        <h1>Bienvenido {{user}}</h1>
+        <p>Estamos a {{fecha}}</p>
+    </div>
+</div>
+<div class="row my-5">
+    <div class="col">
+        <h3>Panel de usuarios</h3>
+    </div>
+</div>
+<div class="row my-5">
+    <div class="col">
+        <ul>
+            <li><a href="{% url 'users_app:update_password' %}">Actualiz datos</a></li>
+            <li><a href="{% url 'users_app:logout-user' %}">Cerrar sesión</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock content %}

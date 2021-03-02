@@ -1,0 +1,24 @@
+{% extends '../base.html' %}
+
+
+{% block title %}
+Login de usuario
+{% endblock title %}
+
+
+
+{% block content %}
+<div class="row my-5">
+    <div class="col">
+        <h1>Accede a tu sesión</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <form method="post">{% csrf_token %}
+            {{form}}
+            <button class="btn btn-sm btn-primary mt-3" type="submit">Acceder</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
